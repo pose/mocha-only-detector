@@ -1,0 +1,35 @@
+{
+  "name": "mocha-only-detector",
+  "version": "0.0.1",
+  "description": "Detect forgotten `describe.only` and `it.only` in mocha tests.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "esprimaq": "^0.0.1",
+    "glob": "^4.3.2",
+    "esprima": "^1.2.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.1.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "mocha",
+    "only",
+    "it.only",
+    "describe.only",
+    "checker",
+    "detector",
+    "assert"
+  ],
+  "author": "Alberto Pose <albertopose@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "mocha-only-detector":      "./bin/mocha-only-detector",
+    "mocha-only-detector-glob": "./bin/mocha-only-detector-glob"
+  }
+}

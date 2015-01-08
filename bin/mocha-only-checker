@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+var mochaOnlyDetector = require('../index');
+
+var count = 0;
+var errored = false;
+
+if (process.argv.length < 3) {
+  throw new Error('Invalid arguments. Usage <files1> <file2>');
+}
+
+process.argv.splice(0, 2);
+
+process.argv.forEach(function (file) {
+  mochaOnlyDetector.checkFile(file, function (err) {
+    if (err) {
+      errored = true;
+      console.error(err);
+    }
+
+    count++;
+
+    if (count === process.argv.length) {
+      process.exit(errored ? 1 : 0);
+    }
+  });
+});
+

@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+var mochaOnlyDetector = require('../index');
+
+var count = 0;
+var errored = false;
+
+if (process.argv.length !== 3) {
+  throw new Error('Invalid arguments. Usage "<glob expression>"');
+}
+
+var file = process.argv[2];
+
+mochaOnlyDetector.checkFolder(file, function (err) {
+  if (err) {
+    errored = true;
+    console.error(err);
+  }
+
+  process.exit(errored ? 1 : 0);
+});
+
+
