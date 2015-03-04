@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Detect forgotten `describe.only` and `it.only` in mocha tests.",
   "main": "index.js",
+  "repository": "https://github.com/auth0/mocha-only-detector",
   "directories": {
     "test": "test"
   },
