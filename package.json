@@ -1,6 +1,6 @@
 {
   "name": "mocha-only-detector",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Detect forgotten `describe.only` and `it.only` in mocha tests.",
   "main": "index.js",
   "repository": "https://github.com/auth0/mocha-only-detector",
@@ -30,7 +30,7 @@
   "author": "Alberto Pose <albertopose@gmail.com>",
   "license": "MIT",
   "bin": {
-    "mocha-only-detector":      "./bin/mocha-only-detector",
+    "mocha-only-detector": "./bin/mocha-only-detector",
     "mocha-only-detector-glob": "./bin/mocha-only-detector-glob"
   }
 }
