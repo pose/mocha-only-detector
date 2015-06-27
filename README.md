@@ -38,7 +38,7 @@ Then running:
 $ mocha-only-detector foo.js bar.js
 ```
 
-will the following error output and a non-zero return code:
+will return the following error output and a non-zero exit code:
 
 ```
 [Error: Error while checking foo.js: Contains describe.only or it.only]
