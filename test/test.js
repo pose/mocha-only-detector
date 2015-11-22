@@ -16,6 +16,12 @@ describe('checkEsprima', function () {
   // TODO Write me
 });
 
+describe('es6 arrow functions', () => {
+  it('should work', () => {
+    assert.ok(true);
+  });
+});
+
 describe('checkString', function () {
   describe('when a string is invalid', function () {
     // TODO Write more cases
