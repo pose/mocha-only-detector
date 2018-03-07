@@ -22,6 +22,20 @@ describe('es6 arrow functions', () => {
   });
 });
 
+describe('es2017 async arrow functions', () => {
+  it('should work', async () => {
+    assert.ok(true);
+  });
+});
+
+describe('es2017 destructuring', () => {
+  it('should work', async () => {
+    const obj1 = { foo: 'bar' };
+    const obj2 = { ...obj1 };
+    assert.ok(obj1 !== obj2);
+  });
+});
+
 describe('checkString', function () {
   describe('when a string is invalid', function () {
     // TODO Write more cases
