@@ -12,16 +12,6 @@ mochaOnlyDetector.checkString('describe.only(); it.only();', function (err) {
   assert.ok(err);
 });
 
-describe('checkEsprima', function () {
-  // TODO Write me
-});
-
-describe('es6 arrow functions', () => {
-  it('should work', () => {
-    assert.ok(true);
-  });
-});
-
 describe('checkString', function () {
   describe('when a string is invalid', function () {
     // TODO Write more cases
@@ -54,6 +44,29 @@ describe('checkString', function () {
   describe('when a string does not contain describe.only or it.only', function () {
     it('should call the callback without error', function (done) {
       checkString('module.exports = function () { }', done);
+    });
+  });
+  describe('when using es6/es2017 features', function (done) {
+    it('should support arrow functions', function (done) {
+      checkString('module.exports = function () { it.only("my test", () => {}); }', function (err) {
+        assert.ok(err);
+        assert.ok(err.message.match(/Contains describe\.only or it.only/));
+        done();
+      });
+    });
+    it('should support async arrow functions', function (done) {
+      checkString('module.exports = function () { it.only("my test", async () => {}); }', function (err) {
+        assert.ok(err);
+        assert.ok(err.message.match(/Contains describe\.only or it.only/));
+        done();
+      });
+    });
+    it('should support destructuring', function (done) {
+      checkString('module.exports = function () { it.only("my test", () => { const obj = [...obj2]; }); }', function (err) {
+        assert.ok(err);
+        assert.ok(err.message.match(/Contains describe\.only or it.only/));
+        done();
+      });
     });
   });
 });

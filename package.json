@@ -10,7 +10,7 @@
   "dependencies": {
     "esprimaq": "^0.0.1",
     "glob": "^4.3.2",
-    "esprima": "^2.7.0"
+    "esprima": "^4.0.0"
   },
   "devDependencies": {
     "mocha": "^2.1.0"
