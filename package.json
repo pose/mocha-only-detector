@@ -8,12 +8,12 @@
     "test": "test"
   },
   "dependencies": {
+    "esprima": "^4.0.0",
     "esprimaq": "^0.0.1",
-    "glob": "^4.3.2",
-    "esprima": "^4.0.0"
+    "glob": "^7.1.2"
   },
   "devDependencies": {
-    "mocha": "^2.1.0"
+    "mocha": "^5.2.0"
   },
   "scripts": {
     "test": "mocha"
