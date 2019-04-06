@@ -8,7 +8,7 @@
     "test": "test"
   },
   "dependencies": {
-    "esprima": "^4.0.0",
+    "esprima": "^4.0.1",
     "esprimaq": "^0.0.1",
     "glob": "^7.1.2"
   },
